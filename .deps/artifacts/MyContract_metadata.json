@@ -4,7 +4,34 @@
 	},
 	"language": "Solidity",
 	"output": {
-		"abi": [],
+		"abi": [
+			{
+				"inputs": [],
+				"name": "getNumber",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_number",
+						"type": "uint256"
+					}
+				],
+				"name": "setNumber",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
 		"devdoc": {
 			"kind": "dev",
 			"methods": {},
@@ -33,11 +60,11 @@
 	},
 	"sources": {
 		".deps/MyContract.sol": {
-			"keccak256": "0x48ec9fc660a605cc1026faeacc96296cfc701ac17e2b57fc74038858e1935bf8",
+			"keccak256": "0x1ebc6fde684ceb7a80d1f074c6f0d7fdf2c7fe8947ed02132aeb76720bad4163",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://56d96ca5f8afad38c7d2fef97e6b171cc0dcba932e9f24bd0dfc810a216d87fb",
-				"dweb:/ipfs/QmfVEAxN9oXzCTwuyBnFp9XvLcdfCzdYaFXUzP9MRg2LG6"
+				"bzz-raw://81e44f4ccd3fb94d72afc04929f089b7c122031ba220ec5c03dec4c91851b29b",
+				"dweb:/ipfs/QmXpPhgbCbd7n5DiigtxDiHBaHQtZ6gS1SNX2E17To6fRB"
 			]
 		}
 	},
