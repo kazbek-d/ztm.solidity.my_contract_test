@@ -1,6 +1,8 @@
 // SPDX-License-Identifier: MIT
 pragma solidity 0.8.30;
 
+import "hardhat/console.sol";
+
 contract MyContract {
     uint256 number;
 
@@ -21,6 +23,9 @@ contract MyContract {
     }
 
     function payMeBackLess() external payable {
+        console.log("msg.value", msg.value);
+        require(msg.value >= 1 ether, "Must send at least 1 ETH");
+
         uint256 fixedNumber = getFixedNumber();
         uint256 ethRefund = msg.value / fixedNumber;
         payable(msg.sender).transfer(ethRefund);
