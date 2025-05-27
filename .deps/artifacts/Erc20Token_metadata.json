@@ -11,6 +11,54 @@
 						"internalType": "address",
 						"name": "",
 						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "allowance",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "spender",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					}
+				],
+				"name": "approve",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
 					}
 				],
 				"name": "balancesOf",
@@ -86,6 +134,35 @@
 				],
 				"stateMutability": "nonpayable",
 				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "sender",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "recipient",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					}
+				],
+				"name": "transferFrom",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
 			}
 		],
 		"devdoc": {
@@ -116,11 +193,11 @@
 	},
 	"sources": {
 		".deps/ERC20.sol": {
-			"keccak256": "0x6e0de53259b062747c9d2755b0dcfff3b49cb1ad99fa6853b867e353337e9ae3",
+			"keccak256": "0xc9e850c316c4db75f47f622d2dec0554e5811fadfc438c8b129e42a554bf390e",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://937435f99b0a657a37293f37766efc2313c67dba050f3cb720af681bcb6abbeb",
-				"dweb:/ipfs/QmVNBuiTzrRms7AHkWMVwWrj1xMh6LRFPx8k6vyyW4QK2g"
+				"bzz-raw://d6640896b5b01d3b97aadff6c2062b42e6705b8279248b938dcb958928698f2e",
+				"dweb:/ipfs/QmcyAMa5DKGDFjeLbaa5QmfR3P8QN5qVGX7kDPsPDfJp5K"
 			]
 		},
 		"hardhat/console.sol": {
