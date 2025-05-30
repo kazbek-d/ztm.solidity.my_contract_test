@@ -12,7 +12,7 @@ contract Erc20Token {
     mapping(address => mapping(address => uint256)) public allowance;
 
     function _transfer(address from, address to, uint256 amount) private returns(bool) {
-        require(balancesOf[msg.sender] >= amount, "ERC20: Insufficient sender balance");
+        require(balancesOf[from] >= amount, "ERC20: Insufficient sender balance");
 
         balancesOf[from] -= amount;
         balancesOf[to] += amount;
@@ -31,8 +31,11 @@ contract Erc20Token {
     }
 
     function approve (address spender, uint256 amount) external returns (bool){
-        require(balancesOf[spender] >= amount, "ERC20: Insufficient spender balance");
         allowance[msg.sender][spender] += amount;
         return true;
     } 
+
+    function giveMeOneToken() public {
+        balancesOf[msg.sender]+= 1e18;
+    }
 }

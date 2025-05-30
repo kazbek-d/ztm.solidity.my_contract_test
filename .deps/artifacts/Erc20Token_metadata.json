@@ -87,6 +87,13 @@
 			},
 			{
 				"inputs": [],
+				"name": "giveMeOneToken",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
 				"name": "name",
 				"outputs": [
 					{
@@ -193,11 +200,11 @@
 	},
 	"sources": {
 		".deps/ERC20.sol": {
-			"keccak256": "0xc9e850c316c4db75f47f622d2dec0554e5811fadfc438c8b129e42a554bf390e",
+			"keccak256": "0x9a0165ba822695a0fbba84936cbbf5015834e930b2b09b6eb7cbbf459bb60a00",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://d6640896b5b01d3b97aadff6c2062b42e6705b8279248b938dcb958928698f2e",
-				"dweb:/ipfs/QmcyAMa5DKGDFjeLbaa5QmfR3P8QN5qVGX7kDPsPDfJp5K"
+				"bzz-raw://ca818e03dae12e91db4288bbd854c0f7c96981ba3fc84bf0508a2affc3756cf6",
+				"dweb:/ipfs/QmTYne7ondVuGSdxBrJbMSxd9YmuBstmEQe5Um3mimfogo"
 			]
 		},
 		"hardhat/console.sol": {
