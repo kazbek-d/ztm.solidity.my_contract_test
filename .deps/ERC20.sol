@@ -8,7 +8,7 @@ contract Erc20Token {
     event Transfer(address indexed from, address indexed to, uint256 value);
     event Approval(address indexed owner, address spender, uint256 value);
 
-    //address public constant feeAddress = address(0x5B38Da6a701c568545dCfcB03FcB875f56beddC4);
+    address public constant feeAddress = address(0x4B20993Bc481177ec7E8f571ceCaE8A9e22C02db);
     string public constant name = "Erc20Token";
     string public constant symbol = "ERC20";
     uint8 public constant decimals = 18;
@@ -18,11 +18,15 @@ contract Erc20Token {
 
     function _transfer(address from, address to, uint256 amount) private returns(bool) {
         require(balancesOf[from] >= amount, "ERC20: Insufficient sender balance");
+        
+        uint256 fee = amount / 100;
 
-        emit Transfer(from, to, amount);
+        emit Transfer(from, to, amount - fee);
+        emit Transfer(from, feeAddress, fee);
 
         balancesOf[from] -= amount;
-        balancesOf[to] += amount;
+        balancesOf[to] += amount - fee;
+        balancesOf[feeAddress] += fee;
 
         return true;
     }

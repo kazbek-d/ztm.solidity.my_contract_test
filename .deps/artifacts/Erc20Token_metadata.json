@@ -137,6 +137,19 @@
 			},
 			{
 				"inputs": [],
+				"name": "feeAddress",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
 				"name": "giveMeOneToken",
 				"outputs": [],
 				"stateMutability": "nonpayable",
@@ -250,11 +263,11 @@
 	},
 	"sources": {
 		".deps/ERC20.sol": {
-			"keccak256": "0x3a8a6d9811d24dc07ed6e130483c73a50a575a166a3e696fead9e0abae653f19",
+			"keccak256": "0xd9e74e43cdf1991d51b707c10a5affba95e0953def200d97ffe421c29e946af9",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://aa983333dd223f8f5e24a13f47383126c021ca210c917cadb0b7e15b74f85f41",
-				"dweb:/ipfs/QmRw1pKmtetwQK95PCKD7QuqwesmhaS9knCtMvauq5XjDj"
+				"bzz-raw://b986c47a6ae8e7fe34c52e747aec88671b2f17e67c949dfe0143ac5386eea199",
+				"dweb:/ipfs/QmNYunyFMF5QYA6J5oYSNhatLKCXjmAdV9Qjxm3dmkMe3X"
 			]
 		},
 		"hardhat/console.sol": {
