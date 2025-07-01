@@ -9,12 +9,21 @@ contract Erc20Token {
     event Approval(address indexed owner, address spender, uint256 value);
 
     address public constant feeAddress = address(0x4B20993Bc481177ec7E8f571ceCaE8A9e22C02db);
-    string public constant name = "Erc20Token";
-    string public constant symbol = "ERC20";
-    uint8 public constant decimals = 18;
+
+    string public name; // Erc20Token
+    string public symbol; // ERC20
+    uint8 immutable public decimals; // 18
+
     uint256 internal _totalSupply;
+    
     mapping(address => uint256) public balancesOf;
     mapping(address => mapping(address => uint256)) public allowance;
+
+    constructor(string memory _name, string memory _symbol, uint8 _decimals) {
+        name = _name;
+        symbol = _symbol;
+        decimals = _decimals;
+    }
 
     function _transfer(address from, address to, uint256 amount) private returns(bool) {
         require(balancesOf[from] >= amount, "ERC20: Insufficient sender balance");

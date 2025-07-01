@@ -6,6 +6,27 @@
 	"output": {
 		"abi": [
 			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_name",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_symbol",
+						"type": "string"
+					},
+					{
+						"internalType": "uint8",
+						"name": "_decimals",
+						"type": "uint8"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
 				"anonymous": false,
 				"inputs": [
 					{
@@ -263,11 +284,11 @@
 	},
 	"sources": {
 		".deps/ERC20.sol": {
-			"keccak256": "0xd9e74e43cdf1991d51b707c10a5affba95e0953def200d97ffe421c29e946af9",
+			"keccak256": "0xa5cd86bb56fc211fe44ac841555d05631899c724398ef271cda28fd5842e4d04",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://b986c47a6ae8e7fe34c52e747aec88671b2f17e67c949dfe0143ac5386eea199",
-				"dweb:/ipfs/QmNYunyFMF5QYA6J5oYSNhatLKCXjmAdV9Qjxm3dmkMe3X"
+				"bzz-raw://46fe1eb15970da69919c92358e93e309476b5f94c367e5b054eda1ceb8495eaa",
+				"dweb:/ipfs/QmTHt5WaBNW7h3RZUR7ycRqjK9ghSuDX1pLZSEwAZ2BURi"
 			]
 		},
 		"hardhat/console.sol": {
