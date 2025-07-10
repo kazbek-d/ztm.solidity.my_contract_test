@@ -5,6 +5,11 @@ import "hardhat/console.sol";
 
 contract Erc20Token {
 
+    modifier onlyOwner {
+        require(msg.sender == owner, "ERC20: Must be token owner");
+        _;
+    }
+
     event Transfer(address indexed from, address indexed to, uint256 value);
     event Approval(address indexed owner, address spender, uint256 value);
 
@@ -15,14 +20,16 @@ contract Erc20Token {
     uint8 immutable public decimals; // 18
 
     uint256 internal _totalSupply;
+    address public owner;
     
     mapping(address => uint256) public balancesOf;
     mapping(address => mapping(address => uint256)) public allowance;
 
-    constructor(string memory _name, string memory _symbol, uint8 _decimals) {
+    constructor(address _owner, string memory _name, string memory _symbol, uint8 _decimals) {
         name = _name;
         symbol = _symbol;
         decimals = _decimals;
+        owner = _owner;
     }
 
     function _transfer(address from, address to, uint256 amount) private returns(bool) {
@@ -57,7 +64,25 @@ contract Erc20Token {
         return true;
     } 
 
-    function giveMeOneToken() public {
-        balancesOf[msg.sender]+= 1e18;
+    function mint(address to, uint256 amount) external onlyOwner {
+        _mint(to, amount);
+    }
+
+    function _mint(address to, uint256 amount) private {
+        balancesOf[to] += amount;
+        _totalSupply +=amount;
+
+        emit Transfer(address(0), to, amount);
+    }
+
+    function burn(address from, uint256 amount) external onlyOwner {
+        _burn(from, amount);
+    }
+
+    function _burn(address from, uint256 amount) private {
+        balancesOf[from] -= amount;
+        _totalSupply -= amount;
+
+        emit Transfer(from, address(0), amount);
     }
 }
