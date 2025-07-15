@@ -321,11 +321,11 @@
 	},
 	"sources": {
 		".deps/ERC20.sol": {
-			"keccak256": "0x5e6fbbc66ccdb2ae1556aec861a98d34264750ba628cb7802848bae731be22fd",
+			"keccak256": "0xf6e50a794453e08c041ed95507682084cb157887e8bc7167f6d7ea1ad3f89909",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://c4b1343022e7358dace82ec95f9bfb69ade3d8f5e6c343e55efe3435f01587d7",
-				"dweb:/ipfs/QmQaLYuVFwLRtSUgPhfhEfjv3NgWzWK1td7QmqiRJ4Lwck"
+				"bzz-raw://84f21b4537ebd5281b3f86a8ac9dda2e4190cf16c66ba2b48bbe20c209466a21",
+				"dweb:/ipfs/QmWvWUNq4Cig3Fu4fAqpociXcAprx7cFvpj6LWUC1uBkUG"
 			]
 		},
 		"hardhat/console.sol": {
