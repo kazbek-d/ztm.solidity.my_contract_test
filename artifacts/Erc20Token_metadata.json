@@ -149,24 +149,6 @@
 				"type": "function"
 			},
 			{
-				"inputs": [
-					{
-						"internalType": "address",
-						"name": "from",
-						"type": "address"
-					},
-					{
-						"internalType": "uint256",
-						"name": "amount",
-						"type": "uint256"
-					}
-				],
-				"name": "burn",
-				"outputs": [],
-				"stateMutability": "nonpayable",
-				"type": "function"
-			},
-			{
 				"inputs": [],
 				"name": "decimals",
 				"outputs": [
@@ -180,6 +162,19 @@
 				"type": "function"
 			},
 			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					}
+				],
+				"name": "deposit",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
 				"inputs": [],
 				"name": "feeAddress",
 				"outputs": [
@@ -190,24 +185,6 @@
 					}
 				],
 				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "address",
-						"name": "to",
-						"type": "address"
-					},
-					{
-						"internalType": "uint256",
-						"name": "amount",
-						"type": "uint256"
-					}
-				],
-				"name": "mint",
-				"outputs": [],
-				"stateMutability": "nonpayable",
 				"type": "function"
 			},
 			{
@@ -234,6 +211,19 @@
 					}
 				],
 				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					}
+				],
+				"name": "redeem",
+				"outputs": [],
+				"stateMutability": "nonpayable",
 				"type": "function"
 			},
 			{
@@ -331,11 +321,11 @@
 	},
 	"sources": {
 		".deps/ERC20.sol": {
-			"keccak256": "0xe1535a345f2e7804057e365b4c707f1baaba1f4c2d939d21577f31d57f71d7cf",
+			"keccak256": "0x5e6fbbc66ccdb2ae1556aec861a98d34264750ba628cb7802848bae731be22fd",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://51dac9a3de3a1e23c88bc70cbae7d434c8c3738ccd7da95ee7d3d8bf2270e03d",
-				"dweb:/ipfs/QmQFve9pX8fnN8UrS4b9f5mteTmeSwEQojvw1kcNSavqUj"
+				"bzz-raw://c4b1343022e7358dace82ec95f9bfb69ade3d8f5e6c343e55efe3435f01587d7",
+				"dweb:/ipfs/QmQaLYuVFwLRtSUgPhfhEfjv3NgWzWK1td7QmqiRJ4Lwck"
 			]
 		},
 		"hardhat/console.sol": {

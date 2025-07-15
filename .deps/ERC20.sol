@@ -58,14 +58,14 @@ contract Erc20Token {
         return _transfer(sender, recipient, amount);
     }
 
-    function approve (address spender, uint256 amount) external returns (bool){
+    function approve(address spender, uint256 amount) external returns (bool){
         allowance[msg.sender][spender] += amount;
         emit Approval(msg.sender, spender, amount);
         return true;
     } 
 
-    function mint(address to, uint256 amount) external onlyOwner {
-        _mint(to, amount);
+    function deposit(uint256 amount) external payable onlyOwner {
+        _mint(msg.sender, amount);
     }
 
     function _mint(address to, uint256 amount) private {
@@ -75,8 +75,8 @@ contract Erc20Token {
         emit Transfer(address(0), to, amount);
     }
 
-    function burn(address from, uint256 amount) external onlyOwner {
-        _burn(from, amount);
+    function redeem(uint256 amount) external onlyOwner {
+        _burn(msg.sender, amount);
     }
 
     function _burn(address from, uint256 amount) private {
@@ -85,4 +85,6 @@ contract Erc20Token {
 
         emit Transfer(from, address(0), amount);
     }
+
+ 
 }
